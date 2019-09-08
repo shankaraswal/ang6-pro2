@@ -1,0 +1,20 @@
+<section class="localData">
+  <div class="row">
+    <div class="col-sm-6 border">
+      <ul class="list-group" *ngFor="let item of objCategories;">
+        <li>
+          
+          <p (click)="levelA(item)" class="btn btn-danger">{{item.name}}</p>
+          <ul *ngFor="let a of item.children">
+            <li>
+              <p class="btn btn-warning">{{a.name}}</p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-sm-6 alert-info">
+      <app-areas></app-areas>
+    </div>
+  </div>
+</section>

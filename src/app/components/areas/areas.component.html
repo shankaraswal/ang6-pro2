@@ -1,0 +1,14 @@
+
+{{clist}}
+<div *ngFor="let item of clist;" >
+    {{item}}
+    <div *ngFor="let a of item.children">
+        <div *ngIf="a.name">
+            <div *ngFor="let b of a.children">
+                <p *ngFor="let c of b.children">
+                    {{c.name}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
